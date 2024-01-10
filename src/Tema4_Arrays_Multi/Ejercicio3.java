@@ -36,9 +36,9 @@ public class Ejercicio3 {
             for (int resultado : array3
             ) {
                 if (resultado != 0) {
-                    System.out.print(resultado + " ");
 
-                }
+
+                } System.out.print(resultado + " ");
 
             }
         }
