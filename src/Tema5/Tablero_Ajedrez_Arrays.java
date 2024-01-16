@@ -25,6 +25,7 @@ public class Tablero_Ajedrez_Arrays {
         }
     }
     public static void main(String[] args) {
+
         generarTablero();
     }
 }
