@@ -29,6 +29,15 @@ public class Ejercicio3 {
         for (int i = array.length - 1; i >= 0; i--) {
             System.out.printf(array[i] + " ");
         }
+        System.out.println();
+        System.out.println("Mostrar el conmtenido normal : ");
+        for (int item : array) {
+
+            System.out.printf(item + " ");
+
+
+        }
+
 
         System.out.println();
     }

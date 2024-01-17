@@ -10,11 +10,25 @@ public class Ejercicio3Métodos {
     public static void leerDieznumeros (int [] array,Scanner scanner) {
 
 
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Introduce numero  " + (i+1) + ":");
+            array[i]= scanner.nextInt();
+
+        }
+
     }
+    public static void mostrarInverso (int [] array,Scanner scanner ){
+
+
+    }
+
+    public static void mostrarNormal (int [] array,Scanner scanner ){}
+
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        int[] numeros = new int[10];
     }
 
 }
