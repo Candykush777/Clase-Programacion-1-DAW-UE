@@ -16,6 +16,18 @@ public class Ejercicio6 {
             int numerosaleatorios = (int) (Math.random() * 31);
             array[i] = numerosaleatorios;
         }
+        modificaciones = getModificaciones(array, modificaciones);
+        System.out.println();
+        for (int item : array){
+
+            System.out.print(item + "\t");
+
+        }
+        System.out.println();
+        System.out.println("\n Hay " + modificaciones +" modificaciones" );
+    }
+
+    protected static int getModificaciones(int[] array, int modificaciones) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 6) {
                 array[i] = 8;
@@ -29,13 +41,6 @@ public class Ejercicio6 {
 
             }
         }
-        System.out.println();
-        for (int item : array){
-
-            System.out.print(item + "\t");
-
-        }
-        System.out.println();
-        System.out.println("\n Hay " + modificaciones +" modificaciones" );
+        return modificaciones;
     }
 }

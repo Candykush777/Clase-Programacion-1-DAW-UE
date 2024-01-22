@@ -9,12 +9,12 @@ import java.util.Scanner;
     - Imprimir por pantalla las palabras generadas*/
 public class Ejercicio6Metodos {
 
-    char[] abecedario = new char[26];
-
+    static char[] abecedario = new char[26];
+static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        char[] abecedario = new char[26];
+
+
 
 
     }
