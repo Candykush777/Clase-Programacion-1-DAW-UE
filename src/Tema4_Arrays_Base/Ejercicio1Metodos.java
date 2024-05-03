@@ -15,6 +15,7 @@ public class Ejercicio1Metodos {
 
     //Metodo para rellenar el array
     public static void llenarArray(int[] array, Scanner scanner) {
+
         for (int i = 0; i < array.length; i++) {
             System.out.println("Introduce  número  " + (i + 1) + ": ");
             array[i] = scanner.nextInt();
