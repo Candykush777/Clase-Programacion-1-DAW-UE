@@ -21,8 +21,13 @@ public class Simulacro_Array {
         for (int i = 0; i < 5; i++) {
 
 
-            System.out.println("Introduce  " + (i + 1) + ": ");
+            System.out.println("Introduce  numeros " + (i + 1) + ": ");
             int numeros = scanner.nextInt();
+
+            if(numeros >10 || numeros <1){
+                System.out.println("Error, el numero no esta en el rango");
+                break;
+            }
 
             arraynumeros[i] = numeros;
             System.out.println("Resultado del array");
