@@ -8,16 +8,16 @@ determine si es una vocal o una consonante utilizando una sentencia switch.
  */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresar caracter en mayuscula");
-        char letra = scanner.next().charAt(0);
+        System.out.println("Ingresar una letra : ");
+        char letra = scanner.next().toLowerCase().charAt(0);
 
         switch (letra) {
 
-            case 'A':
-            case 'E':
-            case 'I':
-            case 'O':
-            case 'U':
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
                 System.out.println("Vocal");
                 break;
 
