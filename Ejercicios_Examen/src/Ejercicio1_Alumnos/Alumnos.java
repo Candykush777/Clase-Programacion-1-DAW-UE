@@ -115,6 +115,7 @@ public class Alumnos {
                     double media=(double)(suma/notas.length);
 
 
+
                     System.out.println("Nota media "+media);
                     break;
 
