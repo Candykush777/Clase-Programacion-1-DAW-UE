@@ -21,55 +21,50 @@ import java.util.Scanner;
 
 public class Entrada {
     public static void main(String[] args) {
-        Scanner scanner =new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         String nombre;
         String apellido;
         int edad;
         double altura;
         double peso;
-        String sexo=" ";
-        double IMC ;
+        String sexo = " ";
+        double IMC;
 
         System.out.println("Introduce tu nombre : ");
-        nombre=scanner.nextLine();
+        nombre = scanner.nextLine();
         System.out.println("Introduce tu apellido : ");
-        apellido=scanner.nextLine();
+        apellido = scanner.nextLine();
         System.out.println("Introduce tu edad : ");
-        edad= scanner.nextInt();
+        edad = scanner.nextInt();
         scanner.nextLine();
         System.out.println("Introduce tu altura : ");
-        altura=scanner.nextDouble();
+        altura = scanner.nextDouble();
         scanner.nextLine();
         System.out.println("Introduce tu peso : ");
-        peso=scanner.nextDouble();
+        peso = scanner.nextDouble();
         scanner.nextLine();
         System.out.println("Introduce tu sexo M/F");
-        sexo=scanner.nextLine();
+        sexo = scanner.nextLine();
 
-        System.out.println("Nombre : " +nombre + " \nApellido : " +apellido + " \nEdad : " +edad + " \nAltura : " +altura +" \nPeso : " +peso + " \nSexo : " +sexo);
-
-
-IMC=calculoIMC(peso,altura);
+        System.out.println("Nombre : " + nombre + " \nApellido : " + apellido + " \nEdad : " + edad + " \nAltura : " + altura + " \nPeso : " + peso + " \nSexo : " + sexo);
 
 
-
-        System.out.println(" Hola " +nombre + " tu IMC  teniendo en cuenta tu altura " +altura + " Y tu peso de : " +peso  +" Es de : " +IMC);
-
+        IMC = calculoIMC(peso, altura);
 
 
+        System.out.println(" Hola " + nombre + " tu IMC  teniendo en cuenta tu altura " + altura + " Y tu peso de : " + peso + " Es de : " + IMC);
 
 
     }
 
 
-    public static double calculoIMC(double peso,double altura){
+    public static double calculoIMC(double peso, double altura) {
 
-        double IMC =peso/(double)(Math.pow(altura,altura));
+        double IMC = peso / (double) (Math.pow(altura, 2));
 
-return IMC;
+        return IMC;
 
     }
-
 
 
 }
