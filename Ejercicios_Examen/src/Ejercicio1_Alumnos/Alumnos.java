@@ -112,7 +112,7 @@ public class Alumnos {
                         suma+=(notas[i]);
 
                     }
-                    double media=(double)(suma/notas.length);
+                    double media=(double)suma/notas.length;
 
 
 
