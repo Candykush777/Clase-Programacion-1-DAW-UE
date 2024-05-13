@@ -10,7 +10,7 @@ public class Entrada {
 
         int combinacion;
 
-        combinacion = (int) (Math.random() * (5001 - 1000)) + 1000;
+        combinacion = (int) (Math.random() * 4001) + 1000;
         System.out.println("El numero de la combinacion es : ");
 
         System.out.println(combinacion);
@@ -22,6 +22,7 @@ public class Entrada {
             scanner.nextLine();
             if (numeros == combinacion) {
                 System.out.println("Enhorabuena has abierto la caja");
+                break;
             } else {
                 System.out.println("Error solo te quedan " + (4 - i) + " intentos");
             }
