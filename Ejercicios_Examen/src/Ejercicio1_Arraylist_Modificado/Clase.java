@@ -22,16 +22,18 @@ public class Clase {
 
     }
 
-    public int notaMasAlta() {
+    public String notaMasAlta() {
 
         int notaMasalta = Integer.MIN_VALUE;
+        String nombre = "";
 
         for (Alumno alumno : listaClase) {
             if (alumno.getNota() > notaMasalta) {
-notaMasalta=alumno.getNota();
+                notaMasalta = alumno.getNota();
+                nombre = alumno.getNombre();
             }
         }
-        return notaMasalta;
+        return "Nombre : " + nombre + ", Nota : " + notaMasalta;
 
     }
 
