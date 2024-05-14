@@ -15,8 +15,11 @@ public class Entrada {
 
         System.out.println(combinacion);
 
+        System.out.println("Tienes 5 intentos : ");
+        System.out.println();
+
         for (int i = 0; i < 5; i++) {
-            System.out.println("Intrduce digitos entre 1000 y 5000 \n" + (i + 1) + ": ");
+            System.out.println("Introduce digitos entre 1000 y 5000  \n" );
 
             int numeros = scanner.nextInt();
             scanner.nextLine();
@@ -24,10 +27,10 @@ public class Entrada {
                 System.out.println("Enhorabuena has abierto la caja");
                 break;
             } else {
-                System.out.println("Error solo te quedan " + (4 - i) + " intentos");
+                System.out.println("Incorrecto solo te quedan " + (4 - i) + " intentos");
             }
 
-            System.out.println("Caja bloqueada has perdido la oportunidad ");
-        }
+
+        }  System.out.println("Caja bloqueada has perdido la oportunidad ");
     }
 }
