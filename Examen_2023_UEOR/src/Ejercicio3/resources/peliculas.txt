@@ -1,0 +1,3 @@
+Interestelar,Christopher Nolan,8.7,9.0,9.5
+El laberinto del fauno,Guillermo del Toro,9.1,8.4,8.8
+Pulp Fiction,Quentin Tarantino,8.8,9.2,8.9
