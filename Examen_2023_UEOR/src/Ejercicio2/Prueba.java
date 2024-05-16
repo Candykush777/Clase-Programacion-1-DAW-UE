@@ -11,12 +11,13 @@ public class Prueba {
         TelefonoMovilApartado1 telefono2 = new TelefonoMovilApartado1("C7", "Samsung", 258, 450, 10);
         TelefonoMovilApartado1 telefono3 = new TelefonoMovilApartado1("I3", "Apple", 128, 700, 30);
 
-        System.out.println(telefono1.toString());
-        System.out.println(telefono2.toString());
-        System.out.println(telefono3.toString());
+        System.out.println(telefono1);
+        System.out.println(telefono2);
+        System.out.println(telefono3);
         ArrayList<ProductoApartado2> productos = new ArrayList<>();
         productos.add(new TelefonoMovilApartado5(500, "iPhone 12", "Apple", 128, 10));
         productos.add(new TelefonoMovilApartado5(300, "Galaxy S20", "Samsung", 256, 5));
+
 
 
         boolean soniguales = (telefono1.equals(telefono2) && telefono2.equals(telefono3) && telefono3.equals(telefono1));
