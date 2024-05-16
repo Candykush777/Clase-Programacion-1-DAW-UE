@@ -82,7 +82,7 @@ public class Formulario {
 
         } catch (LongitudDNINoValidadException e) {
             System.out.println(e.getMessage());
-            ;
+
         } catch (UltimoDigitoNoLetraException e) {
             System.out.println(e.getMessage());
 
