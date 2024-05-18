@@ -21,7 +21,7 @@ public class Colegio {
        ++contadorMatriculas;
        alumno.setnMatricula(contadorMatriculas);
        listaAlumnos.add(alumno);
-        System.out.println("Alumno añadido correctmanete ");
+        System.out.println("Alumno añadido correctamente ");
 
 
     }
