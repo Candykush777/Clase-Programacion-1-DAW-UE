@@ -22,7 +22,17 @@ public class OtrasOperaciones_Reverse_Acentos {
 
         //Poner acentos a todas las letras, solo deja vocales
 
-        palabra = palabra.replaceAll("[aeiou]", "áéíóú");
+        palabra =  palabra
+                .replace('a', 'á')
+                .replace('e', 'é')
+                .replace('i', 'í')
+                .replace('o', 'ó')
+                .replace('u', 'ú')
+                .replace('A', 'Á')
+                .replace('E', 'É')
+                .replace('I', 'Í')
+                .replace('O', 'Ó')
+                .replace('U', 'Ú');
 
         System.out.println("Acentos en todas las vocales " + palabra);
 
