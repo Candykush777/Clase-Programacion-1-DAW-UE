@@ -14,6 +14,17 @@ public class Prueba {
 
         Triangulo triangulo=new Triangulo("triangulo",3,4,3);
 
+
+        boolean soniguales= circulo.equals(rectangulo) && circulo.equals(triangulo) && triangulo.equals(rectangulo);
+
+        if(soniguales){
+
+            System.out.println("Los objetos son iguales");
+        }else {
+
+            System.out.println("Los objetos no son iguales");
+        }
+
         listaFiguras.add(circulo);
         listaFiguras.add(rectangulo);
         listaFiguras.add(triangulo);
