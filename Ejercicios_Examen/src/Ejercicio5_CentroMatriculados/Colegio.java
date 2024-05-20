@@ -19,7 +19,7 @@ public class Colegio {
     public void darAlta(Alumno alumno) {
 
 
-       alumno.setnMatricula(contadorMatriculas++);
+       alumno.setnMatricula(++contadorMatriculas);
        listaAlumnos.add(alumno);
         System.out.println("Alumno añadido correctamente ");
 

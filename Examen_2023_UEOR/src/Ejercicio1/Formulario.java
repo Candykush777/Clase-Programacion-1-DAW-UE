@@ -53,7 +53,8 @@ public class Formulario {
                         }
 
 
-                        break;
+
+break;
                     case 4:
 
                         if (nombre.isEmpty() || apellidos.isEmpty() || dni.isEmpty()) {
