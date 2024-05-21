@@ -32,6 +32,20 @@ public class Rectangulo extends Figura2D{
         return lAltura+lBase;
     }
 
+    @Override
+    public String toString() {
+        return "Rectangulo{" + "nombre " +super.toString() +
+                "lBase=" + lBase +
+                ", lAltura=" + lAltura +
+                '}';
+    }
+
+    @Override
+    public void mostrarDatos() {
+
+        System.out.println("Nombre " +getNombre() +" Perimetro : "+calcularPerimetro());;
+
+    }
 
     @Override
     public boolean equals(Object o) {

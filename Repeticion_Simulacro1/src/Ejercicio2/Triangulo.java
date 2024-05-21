@@ -54,10 +54,30 @@ public class Triangulo extends Figura2D{
         return long1 == triangulo.long1 && long2 == triangulo.long2 && long3 == triangulo.long3;
     }
 
+
+    @Override
+    public String toString() {
+        return "Triangulo{" + "nombre " +super.toString() +
+                "long1=" + long1 +
+                ", long2=" + long2 +
+                ", long3=" + long3 +
+                '}';
+    }
+
+    @Override
+    public void mostrarDatos() {
+
+        System.out.println("Nombre " +getNombre() +" Perimetro : "+calcularPerimetro());;
+
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), long1, long2, long3);
-    }
+    }}
 
 
-}
+
+
+
+

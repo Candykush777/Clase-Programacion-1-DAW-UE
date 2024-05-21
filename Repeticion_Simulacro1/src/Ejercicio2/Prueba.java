@@ -33,6 +33,8 @@ public class Prueba {
 
 
             System.out.println(figura2D);
+
+            figura2D.mostrarDatos();
         }
 
 

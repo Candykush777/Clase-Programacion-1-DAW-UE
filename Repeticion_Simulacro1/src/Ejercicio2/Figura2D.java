@@ -24,12 +24,12 @@ public abstract class Figura2D implements FiguraGeométrica{
     @Override
     public String toString() {
         return "" +
-                " Nombre = '" + nombre + '\'' + "PErimetro = " +calcularPerimetro()
+                "" + nombre + '\''
                ;
     }
 
-
-
+    @Override
+    abstract public void mostrarDatos();
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
