@@ -11,9 +11,12 @@ public class Colegio {
         this.listaAlumnos = new ArrayList<>();
     }
 
-    public void listarAlumnos(Alumno alumno){
+    public void listarAlumnos(){
 
-        listaAlumnos.add(alumno);
+        for(Alumno alumno:listaAlumnos){
+
+            alumno.toString();
+        }
     }
 
     public void darAlta(Alumno alumno) {

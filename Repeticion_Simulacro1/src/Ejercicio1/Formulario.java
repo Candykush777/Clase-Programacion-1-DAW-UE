@@ -13,108 +13,140 @@ public class Formulario {
         String dni = "";
         String email = "";
 
-
+        boolean salir = false;
         int option;
 
-try{
-        do {
-            System.out.println("Ingresa una opción : ");
-            System.out.println();
+        try {
+            do {
+                System.out.println("Ingresa una opción : ");
+                System.out.println();
 
-            System.out.println("""
-                    1.- Rellenar Nombre 
-                    2.- Rellenar apellidos
-                    3.- Rellenar DNI
-                    4.- Rellenar email
-                    5.- Finalizar""");
+                System.out.println("""
+                        1.- Rellenar Nombre 
+                        2.- Rellenar apellidos
+                        3.- Rellenar DNI
+                        4.- Rellenar email
+                        5.- Finalizar""");
 
-            option = scanner.nextInt();
-            scanner.nextLine();
-
-
-            switch (option) {
-
-                case 1:
-
-                    System.out.println("Rellena tu nombre : ");
-
-                    nombre = scanner.nextLine();
-
-                    if (!Character.isLetter(Integer.parseInt(nombre))) {
+                option = scanner.nextInt();
+                scanner.nextLine();
 
 
-                       throw new TipoDatoIncorrectoException("Error solo letras ");
+                switch (option) {
 
+                    case 1:
+
+                        System.out.println("Rellena tu nombre : ");
+
+                        nombre = scanner.nextLine();
+
+                        for (char c : nombre.toCharArray()) {
+
+                            if (!Character.isLetter(c)) {
+
+
+                                throw new TipoDatoIncorrectoException("Error solo letras ");
+
+                            }
+                        }
+
+                        break;
+                    case 2:
+
+                        System.out.println("Rellena tus apellidos : ");
+
+                        apellido = scanner.nextLine();
+                        for(char c :nombre.toCharArray()){
+
+
+
+
+                        if (!Character.isLetter(c)) {
+
+
+                            throw new TipoDatoIncorrectoException("Error solo letras ");
+
+                        }}
+
+
+                        break;
+                    case 3:
+
+                        System.out.println("Rellena tu DNI : ");
+
+                        dni = scanner.nextLine();
+
+
+
+                        if (dni.length()!= 9) {
+
+                            throw new LongitudDNINoValidaException("Error longitud");
+                        }
+
+                        char ultimoCaracter = dni.charAt(dni.length() - 1);
+                        if (!Character.isLetter(ultimoCaracter)) {
+                            throw new TipoDatoIncorrectoException("Error: el último carácter debe ser una letra");
+                        }for (int i = 0; i < dni.length() - 1; i++) {
+                        if (!Character.isDigit(dni.charAt(i))) {
+                            throw new NumeracionContieneLetrasException("Error: los primeros 8 caracteres deben ser dígitos");
+                        }
                     }
 
 
-                    break;
-                case 2:
+                        break;
+                    case 4:
 
-                    System.out.println("Rellena tus apellidos : ");
+                        System.out.println("Rellena tu email : ");
 
-                    apellido = scanner.nextLine();
+                        email = scanner.nextLine();
 
-                    if (!Character.isLetter(Integer.parseInt(nombre))) {
+                        String cadena = "correo@example.com";
 
-
-                         throw new TipoDatoIncorrectoException("Error solo letras ");
-
-                    }
-
-
-                    break;
-                case 3:
-
-                    System.out.println("Rellena tu DNI : ");
-
-                    dni = scanner.nextLine();
-
-                    if (dni.length() - 1 != 9) {
-
-                        throw new LongitudDNINoValidaException("Error longitud");
-                    }
+                        if (!email.contains("@") || !email.contains(".")) {
+                            throw new EmailIncorrectoException("Error: La cadena debe contener '@' y '.'");
+                        }
 
 
-                    break;
-                case 4:
 
-                    System.out.println("Rellena tu email : ");
+                        break;
+                    case 5:
 
-                    email = scanner.nextLine();
+                        if (nombre.isEmpty() || apellido.isEmpty() || dni.isEmpty() || email.isEmpty()) {
 
-                    break;
-                case 5:
+                            System.out.println("Rellena todos los campos para poder continuar ");
 
-                   /* if (nombre.isEmpty()|| apellido.isEmpty()|| dni.isEmpty() || email.isEmpty()){
+                        }else {
+                            System.out.println("Nombre : " + nombre);
+                            System.out.println("Apellido : " + apellido);
+                            System.out.println("DNI " + dni);
+                            System.out.println("Email : " + email);
+                            salir = true;
 
-                        System.out.println("Rellena todos los campos para poder continuar ");
-                    }*/
+                        }
 
-                    break;
-                default:
-                    System.out.println("Inserta una opcion válida");
+                        break;
+                    default:
+                        System.out.println("Inserta una opcion válida");
 
 
-            }
-        } while (option != 5);
-        if (nombre.isEmpty() || apellido.isEmpty() || dni.isEmpty() || email.isEmpty()) {
+                }
+            } while (!salir);
 
-            System.out.println("Rellena todos los campos para poder continuar ");
-            return;
+
+
+
+        } catch (TipoDatoIncorrectoException e) {
+            System.out.println("Error solo letras");
+        } catch (LongitudDNINoValidaException e) {
+            System.out.println("Error tamaño no valido");
+            ;
+        }catch (NumeracionContieneLetrasException e){
+            System.out.println("Error: los primeros 8 caracteres deben ser dígitos");
+        }catch (EmailIncorrectoException e){
+            System.out.println("Error: La cadena debe contener '@' y '.'");
         }
-    System.out.println("Nombre : " +nombre);
-    System.out.println("Apellido : " +apellido);
-    System.out.println("DNI " +dni);
-    System.out.println("Email : " +email);
-
-
-    } catch (TipoDatoIncorrectoException e) {
-    System.out.println("Error solo letras");
-} catch (LongitudDNINoValidaException e) {
-    System.out.println("Error tamaño no valido");;
+    }
 }
-    }}
 
 
 
