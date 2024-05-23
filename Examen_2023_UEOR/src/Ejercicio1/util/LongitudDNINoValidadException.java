@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Ejercicio1.util;
 
 public class LongitudDNINoValidadException extends Exception {
 

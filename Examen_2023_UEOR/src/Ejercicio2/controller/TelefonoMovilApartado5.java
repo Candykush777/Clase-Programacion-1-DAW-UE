@@ -1,51 +1,43 @@
-package Ejercicio2;
+package Ejercicio2.controller;
 
-import java.util.ArrayList;
-import java.util.Objects;
+import Ejercicio2.model.ProductoApartado2;
 
-public class TelefonoMovilApartado1 {
+public class TelefonoMovilApartado5 extends ProductoApartado2 {
 
     private String modelo;
     private String marca;
     private int memoria;
-    private double precio;
     private double descuento;
-    private ArrayList<ProductoApartado2>listaProductos;
-
-    public TelefonoMovilApartado1() {
 
 
+
+    public TelefonoMovilApartado5() {
     }
 
-
-    public TelefonoMovilApartado1(String modelo, String marca, int memoria, double precio, double descuento) {
+    public TelefonoMovilApartado5(double precio, String modelo, String marca, int memoria, double descuento) {
+        super(precio);
         this.modelo = modelo;
         this.marca = marca;
         this.memoria = memoria;
-        this.precio = precio;
         this.descuento = descuento;
     }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof TelefonoMovilApartado1 that)) return false;
-        return memoria == that.memoria && Double.compare(precio, that.precio) == 0 && Double.compare(descuento, that.descuento) == 0 && Objects.equals(modelo, that.modelo) && Objects.equals(marca, that.marca);
-    }
-
-
-
     @Override
     public String toString() {
-        return "TelefonoMovilApartado1 " +
+        return "TelefonoMovilApartado5{" +
                 "modelo='" + modelo + '\'' +
                 ", marca='" + marca + '\'' +
                 ", memoria=" + memoria +
-                ", precio=" + precio +
                 ", descuento=" + descuento +
-                ' ';
+                '}';
     }
+
+    @Override
+    public double calcularPrecioFinal() {
+        double descuentoEnEuros = (getPrecio() * getDescuento()) / 100.0;
+        return getPrecio() - descuentoEnEuros;
+    }
+
 
     public String getModelo() {
         return modelo;
@@ -71,13 +63,7 @@ public class TelefonoMovilApartado1 {
         this.memoria = memoria;
     }
 
-    public double getPrecio() {
-        return precio;
-    }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
 
     public double getDescuento() {
         return descuento;

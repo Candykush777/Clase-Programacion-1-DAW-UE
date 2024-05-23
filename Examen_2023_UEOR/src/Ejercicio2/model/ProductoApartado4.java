@@ -1,6 +1,6 @@
-package Ejercicio2;
+package Ejercicio2.model;
 
-public abstract class ProductoApartado4 implements Descuento{
+public abstract class ProductoApartado4 implements Descuento {
 
     private double precio;
 

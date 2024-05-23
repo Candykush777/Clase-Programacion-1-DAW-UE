@@ -1,5 +1,8 @@
 package Ejercicio1;
 
+import Ejercicio1.util.LongitudDNINoValidadException;
+import Ejercicio1.util.UltimoDigitoNoLetraException;
+
 import java.util.Scanner;
 
 public class Formulario {

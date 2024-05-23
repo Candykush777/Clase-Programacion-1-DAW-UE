@@ -1,5 +1,9 @@
 package Ejercicio2;
 
+import Ejercicio2.controller.TelefonoMovilApartado1;
+import Ejercicio2.controller.TelefonoMovilApartado5;
+import Ejercicio2.model.ProductoApartado2;
+
 import java.util.ArrayList;
 
 public class Prueba {
